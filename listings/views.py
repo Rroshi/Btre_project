@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from .models import Listings
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .choices import price_choices, bedroom_choices, state_choices
-
+ 
 def index(request):
     listings = Listings.objects.order_by('-list_date').filter(is_published=True)
 
